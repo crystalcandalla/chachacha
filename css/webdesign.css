@@ -46,6 +46,41 @@ img {
     height: auto;
 }
 
+section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#wrapper {
+  position: relative;
+}
+
+#over_map {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  z-index: 99;
+  width: 40%;
+  height: 80%;
+  background: white;
+}
+
+.menuBlock {
+  width: 60%;
+  height: 800px;
+  padding: 20px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-in-out;
+}
+
+.menuBlock.show{
+  opacity: 1;
+  transform: translateY(0);
+
+}
+
 
 .textBlock {
 	width: 100%;
