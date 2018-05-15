@@ -46,9 +46,6 @@ h1 {
   color: black;
   font-weight: 400;
   letter-spacing: 20px;
-  background: url(../images/decorations.png);
-  background-position: center top;
-  background-repeat: no-repeat;
 
 }
 
@@ -123,8 +120,8 @@ table {
 
 #over_map {
   position: absolute;
-  bottom: 40px;
-  right: 10px;
+  top: 40px;
+  left: 10px;
   z-index: 99;
   width: 40%;
   height: 80%;
