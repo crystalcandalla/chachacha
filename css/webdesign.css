@@ -7,43 +7,128 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: 'Tajawal', sans-serif;
+  font-weight: 400;
 }
 
-h2.menuSection {
-	font-size: 26px;
-	color: #ec3b47;
-	display: block;
-}
-
-h3.menuItem {
-	font-size: 20px;
-	display: block;
-}
-
-p.menu {
-	font-size: 12px;
-	display: block;
-}
-
-
-p.main {
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin-bottom: 15px;
-	font-weight: 500;
-	text-align: center;
-	color: white;
+section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: #F04e10;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 article {
   margin-bottom: 1%;
-  background-color: #efefef;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+}
+
+p.intro {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+
+
+h1 {
+  font-size: 50px;
+  color: black;
+  font-weight: 400;
+  letter-spacing: 20px;
+  background: url(../images/decorations.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+
+}
+
+h2 {
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+
+th {
+  font-size: 26px;
+  color: #ec3b47;
+  text-align: left;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  line-height: 16px;
+
+}
+
+td {
+  width: 80%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.price {
+  padding-left: 20px;
+  font-weight: 800;
+  color: #989898;
+}
+
+.item {
+  font-size: 24px;
+  font-weight: 400;
+  display: block;
+  vertical-align: bottom;
+}
+
+
+.saladBlock, .tapasBlock, .platosBlock, .sandwichBlock {
+  width: 60%;
+  padding: 30px 40px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  opacity: 0;
+  background-color: white;
+  transform: translateY(100px);
+  transition: all 1s ease-in-out;
+}
+
+.saladBlock.show, .tapasBlock.show, .platosBlock.show, .sandwichBlock.show{
+  opacity: 1;
+  transform: translateY(0);
+
+}
+
+
+
+#wrapper {
+  position: relative;
+}
+
+#over_map {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  z-index: 99;
+  width: 40%;
+  height: 80%;
+  background: white;
 }
 
 
@@ -59,7 +144,6 @@ img {
   margin: 1%;
   padding: 30px;
   width: 48%;
-  background: url(../images/map.png);
   background-size: cover;
 }
 
@@ -68,33 +152,44 @@ img {
 }
 
 .parallax { 
-    background: url(../images/cover.jpg);
-    height: 50%; 
+    background: url(../images/cover2.jpg);
+    height: 80%;
+    width: 100%; 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
+
+.mainLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
 
 .topnav {
   overflow: hidden;
   background-color: #fec430;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed;
+  top: 0; 
+  width: 100%; 
   z-index: 100;
-  transition: top 0.3s;
+  transition: top 3s;
+  list-style: none;
+  text-align: center;
 }
 
 .topnav a {
-  float: left;
-  display: block;
   color: #ffffff;
-  text-align: center;
   padding: 18px 20px;
   text-decoration: none;
   font-size: 20px;
+  display: inline-block;
 }
+
+
 
 .topnav a:hover {
   background-color: tomato;
@@ -110,7 +205,7 @@ img {
 
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
@@ -147,3 +242,43 @@ img {
   }
 }
 
+
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: stretch;
+  padding: 0 4px;
+  margin: 0 40px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 33.33%;
+  max-width: 33.33%;
+  padding: 0 4px;
+  justify-content: center; 
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
