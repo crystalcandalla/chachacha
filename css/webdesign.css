@@ -13,7 +13,7 @@ body, html {
 section {
   width: 100%;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 20px;
   background-color: #F04e10;
   background-attachment: fixed;
   background-position: center;
@@ -21,9 +21,11 @@ section {
   background-size: cover;
 }
 
+/*
 article {
   margin-bottom: 1%;
 }
+*/
 
 img {
     max-width: 100%;
@@ -45,7 +47,8 @@ h1 {
   font-size: 50px;
   color: black;
   font-weight: 400;
-  letter-spacing: 20px;
+  letter-spacing: 2
+  0px;
 
 }
 
@@ -81,6 +84,17 @@ table {
   border-collapse: collapse;
 }
 
+
+.goTo {
+  position: absolute;
+  margin: 0 auto;
+  width: 80%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 10px;
+}
+
 .price {
   padding-left: 20px;
   font-weight: 800;
@@ -96,7 +110,7 @@ table {
 
 
 .saladBlock, .tapasBlock, .platosBlock, .sandwichBlock {
-  width: 60%;
+  width: 90%;
   padding: 30px 40px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -111,8 +125,6 @@ table {
   transform: translateY(0);
 
 }
-
-
 
 #wrapper {
   position: relative;
@@ -137,11 +149,10 @@ table {
 }
 
 .leftCol, .rightCol {
+  position: relative;
   float: left;
-  margin: 1%;
-  padding: 30px;
-  width: 48%;
-  background-size: cover;
+  margin: 5%;
+  width: 40%;
 }
 
 .clearFloat {
@@ -150,7 +161,7 @@ table {
 
 .parallax { 
     background: url(../images/cover2.jpg);
-    height: 80%;
+    height: 100%;
     width: 100%; 
     background-attachment: fixed;
     background-position: center;
@@ -161,7 +172,7 @@ table {
 
 .mainLogo {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     }
@@ -224,17 +235,19 @@ table {
 }
 
 @media screen and (max-width: 600px) {
-  .rightCol {
+  .rightCol{
     float: none;
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
     display: block;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .leftCol {
+  .leftCol{
     float: none;
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
     display: block;
   }
 }
@@ -245,7 +258,6 @@ table {
 .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
   align-items: stretch;
   padding: 0 4px;
   margin: 0 40px;
@@ -256,7 +268,6 @@ table {
   flex: 33.33%;
   max-width: 33.33%;
   padding: 0 4px;
-  justify-content: center; 
 }
 
 .column img {
