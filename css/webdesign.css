@@ -8,6 +8,7 @@ body, html {
   width: 100%;
   font-family: 'Tajawal', sans-serif;
   font-weight: 400;
+  background-color: #F04e10;
 }
 
 section {
@@ -19,7 +20,30 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: 30px;
 }
+
+article {
+  background: url(../images/haightFront.jpg);
+  width: 100%;
+  margin: 0 auto;
+  background-color: #38b898;
+  padding: 20px;
+  margin-bottom: 60px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+article.mission {
+  background: url(../images/missionFront.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;}
 
 /*
 article {
@@ -32,6 +56,7 @@ img {
     height: auto;
 }
 
+
 p.intro {
   font-size: 14px;
   line-height: 24px;
@@ -40,6 +65,16 @@ p.intro {
   font-weight: 500;
   text-align: center;
   color: white;
+}
+
+p {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+p.bold {
+  font-weight:600;
+  letter-spacing: 0.5px;
 }
 
 
@@ -76,7 +111,11 @@ h3 {
 }
 
 td {
-  width: 80%;
+  width: 90%;
+}
+
+td.location {
+  text-align: right;
 }
 
 table {
@@ -84,11 +123,17 @@ table {
   border-collapse: collapse;
 }
 
+table.location {
+  table-layout: fixed;
+  margin-bottom: 10px;
+  max-height: 350px;
+}
+
 
 .goTo {
   position: absolute;
   margin: 0 auto;
-  width: 80%;
+  width: 50%;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -126,19 +171,7 @@ table {
 
 }
 
-#wrapper {
-  position: relative;
-}
 
-#over_map {
-  position: absolute;
-  top: 40px;
-  left: 10px;
-  z-index: 99;
-  width: 40%;
-  height: 80%;
-  background: white;
-}
 
 
 .textBlock {
@@ -151,8 +184,8 @@ table {
 .leftCol, .rightCol {
   position: relative;
   float: left;
-  margin: 5%;
-  width: 40%;
+  margin: 1%;
+  width: 48%;
 }
 
 .clearFloat {
@@ -196,7 +229,6 @@ table {
   font-size: 20px;
   display: inline-block;
 }
-
 
 
 .topnav a:hover {
@@ -254,39 +286,63 @@ table {
 
 
 
+/* ----------------------------------- photo grid */
 
-.row {
+.flexContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: stretch;
   padding: 0 4px;
   margin: 0 40px;
+  overflow-y: auto;
+  margin: 20px 0;
 }
 
-/* Create four equal columns that sits next to each other */
-.column {
+.flexItem {
   flex: 33.33%;
   max-width: 33.33%;
-  padding: 0 4px;
-}
+  padding: 0 8px 0 0}
 
-.column img {
+.flexItem img {
   margin-top: 8px;
   vertical-align: middle;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
-  .column {
-    flex: 33.33%;
-    max-width: 33.33%;
+
+  .flexContainer {
+    height: 500px;
+    overflow: auto;
+
   }
+
+  .flexItem {
+    max-width: 100%;
+    flex: 50%;
+  }
+
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  iframe {
+    height: 500px;
+  }
+
 @media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
+
+  .flexContainer {
+    height: 200px;
+  }
+  .flexItem {
+    flex: 25%;
     max-width: 100%;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  p p.bold {
+    font-size: 8px;
   }
 }
